@@ -1,6 +1,7 @@
 import React from "react";
 import { FaChevronDown } from "react-icons/fa";
 import { Link } from "react-scroll";
+import { motion } from "framer-motion";
 import videoSrc from "../../assets/img/video/finest video.mp4";
 import imgSrc from "../../assets/img/Artboard 1.png";
 
@@ -19,11 +20,12 @@ function Home() {
       className="w-full flex flex-col items-center text-center px-4 sm:px-6 lg:px-12 mt-28 md:mt-2"
     >
       <div className="min-h-screen mx-auto flex items-center justify-center bg-white px-4 sm:px-6 lg:px-12">
-        <div className="container mx-auto max-w-7xl flex  flex-wrap md:flex-nowrap items-center">
-          <div
-            className={`w-full md:w-1/2 space-y-8 ${
-              isArabic ? "text-right" : "text-left"
-            }`}
+        <div className="container mx-auto max-w-7xl flex flex-wrap md:flex-nowrap items-center">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className={`w-full md:w-1/2 space-y-8 ${isArabic ? "text-right" : "text-left"}`}
           >
             <div className="relative inline-block">
               <h1 className="text-5xl font-extrabold text-gray-900 relative z-10">
@@ -44,37 +46,51 @@ function Home() {
                 isArabic ? "md:justify-end" : "md:justify-start"
               } space-x-4`}
             >
-              <Link
-                to="about"
-                smooth={true}
-                duration={1500}
-                offset={-50}
-                className="cursor-pointer relative group bg-purple-700 text-white px-6 py-3 rounded-lg shadow-lg hover:bg-purple-500 transition-all flex items-center gap-2 transform hover:scale-105"
-              >
-                {t("discoverMore")}
-                <FaChevronDown className="text-white opacity-0 group-hover:opacity-100 group-hover:translate-y-1 transition-all duration-300" />
-              </Link>
+              <motion.div whileHover={{ scale: 1.1 }}>
+                <Link
+                  to="about"
+                  smooth={true}
+                  duration={1500}
+                  offset={-50}
+                  className="cursor-pointer relative group bg-purple-700 text-white px-6 py-3 rounded-lg shadow-lg hover:bg-purple-500 transition-all flex items-center gap-2"
+                >
+                  {t("discoverMore")}
+                  <FaChevronDown className="text-white opacity-0 group-hover:opacity-100 group-hover:translate-y-1 transition-all duration-300" />
+                </Link>
+              </motion.div>
 
-              <Link
-                to="contact"
-                smooth={true}
-                duration={1500}
-                offset={-50}
-                className="relative group cursor-pointer bg-blue-300 text-black px-6 py-3 rounded-lg shadow-lg hover:bg-blue-500 transition-all flex items-center gap-2 transform hover:scale-105"
-              >
-                {t("contactUs")}
-                <FaChevronDown className="text-white opacity-0 group-hover:opacity-100 group-hover:translate-y-1 transition-all duration-300" />
-              </Link>
+              <motion.div whileHover={{ scale: 1.1 }}>
+                <Link
+                  to="contact"
+                  smooth={true}
+                  duration={1500}
+                  offset={-50}
+                  className="relative group cursor-pointer bg-blue-300 text-black px-6 py-3 rounded-lg shadow-lg hover:bg-blue-500 transition-all flex items-center gap-2"
+                >
+                  {t("contactUs")}
+                  <FaChevronDown className="text-white opacity-0 group-hover:opacity-100 group-hover:translate-y-1 transition-all duration-300" />
+                </Link>
+              </motion.div>
             </div>
-          </div>
+          </motion.div>
 
-          <div className="w-full md:w-1/2 mt-10 md:mt-0 flex justify-center">
+          <motion.div
+            initial={{ opacity: 0, x: 100 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            className="w-full md:w-1/2 mt-10 md:mt-0 flex justify-center"
+          >
             <img src={imgSrc} alt="Logo Finest Touch" className="w-full" />
-          </div>
+          </motion.div>
         </div>
       </div>
 
-      <div className="w-full flex justify-center pb-5">
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        className="w-full flex justify-center pb-5"
+      >
         <video
           src={videoSrc}
           autoPlay
@@ -83,7 +99,7 @@ function Home() {
           controls
           className="w-full max-w-3xl h-auto rounded-lg shadow-lg"
         />
-      </div>
+      </motion.div>
     </section>
   );
 }

@@ -1,8 +1,8 @@
 import React from "react";
 import { FaGlobe, FaUsers, FaLightbulb } from "react-icons/fa";
+import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import UnderlineSkew from "../Ui/UnderlineSkew ";
-
 
 const About = () => {
   const { t } = useTranslation();
@@ -26,7 +26,13 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="bg-gray-100 py-16 rtl text-right">
+    <motion.section 
+      id="about" 
+      className="bg-gray-100 py-16 rtl text-right"
+      initial={{ opacity: 0, y: 50 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+    >
       <div className="max-w-6xl mx-auto text-center px-6">
         <div className="relative inline-block mb-12">
           <h1 className="text-5xl font-extrabold text-gray-900 relative z-10">
@@ -42,18 +48,21 @@ const About = () => {
 
         <div className="grid md:grid-cols-3 gap-8 mt-12">
           {data.map((item, index) => (
-            <div
+            <motion.div
               key={index}
               className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all text-center transform hover:-translate-y-2"
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6, delay: index * 0.2 }}
             >
               {item.icon}
               <h3 className="text-2xl font-semibold text-gray-800 mt-4">{item.title}</h3>
               <p className="text-gray-600 mt-3 text-base leading-relaxed">{item.description}</p>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

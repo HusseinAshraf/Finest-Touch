@@ -95,7 +95,7 @@ function Footer() {
           </div>
         </div>
         <div className="flex flex-col-reverse justify-between pt-5 mt-6 border-t border-gray-700 lg:flex-row">
-          <p className="text-sm">© 2025 EventPro. {t("allRightsReserved")}</p>
+          <p className="text-sm">© 2025 Finest Touch. {t("allRightsReserved")}</p>
           <ul className="flex space-x-5 text-sm">
             <li>
               <a href="/" className="hover:text-blue-400">
