@@ -1,5 +1,5 @@
 import React from "react";
-import { FaGlobe, FaUsers, FaLightbulb } from "react-icons/fa";
+import { FaGlobe, FaUsers, FaLightbulb, FaVideo, FaHandshake, FaRing } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import UnderlineSkew from "../Ui/UnderlineSkew ";
@@ -9,19 +9,34 @@ const About = () => {
 
   const data = [
     {
+      icon: <FaVideo className="text-red-600 text-6xl mx-auto mb-4" />, 
+      title: t("mediaProductionTitle"),
+      description: t("mediaProductionDesc")
+    },
+    {
       icon: <FaGlobe className="text-blue-600 text-6xl mx-auto mb-4" />, 
-      title: t("missionTitle"),
-      description: t("missionDesc")
+      title: t("eventManagementTitle"),
+      description: t("eventManagementDesc")
     },
     {
       icon: <FaUsers className="text-green-600 text-6xl mx-auto mb-4" />,
-      title: t("teamTitle"),
-      description: t("teamDesc")
+      title: t("crowdManagementTitle"),
+      description: t("crowdManagementDesc")
     },
     {
       icon: <FaLightbulb className="text-yellow-500 text-6xl mx-auto mb-4" />,
-      title: t("visionTitle"),
-      description: t("visionDesc")
+      title: t("digitalEventsTitle"),
+      description: t("digitalEventsDesc")
+    },
+    {
+      icon: <FaHandshake className="text-purple-600 text-6xl mx-auto mb-4" />,
+      title: t("marketingServicesTitle"),
+      description: t("marketingServicesDesc")
+    },
+    {
+      icon: <FaRing className="text-pink-600 text-6xl mx-auto mb-4" />,
+      title: t("weddingEventsTitle"),
+      description: t("weddingEventsDesc")
     }
   ];
 

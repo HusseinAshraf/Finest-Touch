@@ -38,7 +38,7 @@ function Contact() {
             <p className="text-gray-700">{t("contactMessage")}</p>
             <div className="mt-4 space-y-3">
               <p className="text-gray-800 flex items-center gap-2">
-                <strong>{t("email")}:</strong> contact@eventcompany.com
+                <strong>{t("email")}:</strong> info@finesttouch.com.sa
               </p>
               <p className="text-gray-800 flex items-center gap-2">
                 <strong>{t("phone")}:</strong> +1 234 567 890

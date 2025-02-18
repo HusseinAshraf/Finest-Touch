@@ -47,10 +47,10 @@ function Footer() {
               <p>
                 <span className="font-medium">{t("email")}:</span>{" "}
                 <a
-                  href="mailto:info@lorem.mail"
+                  href="mailto:info@finesttouch.com.sa"
                   className="hover:text-blue-400"
                 >
-                  info@lorem.mail
+                 info@finesttouch.com.sa
                 </a>
               </p>
               <p>

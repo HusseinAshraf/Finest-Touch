@@ -5,19 +5,24 @@
   "projects": "Projects",
   "contact": "Contact",
   "finestTouch": "Finest Touch",
+  "subtitle": "We are a company specialized in organizing and managing events at a professional level...",
+
   "homeDescription": "We are a company specialized in organizing and managing events at a professional level, offering comprehensive services that include planning, coordination, execution, and marketing for various types of events, from conferences and exhibitions to private parties and official occasions.",
   "discoverMore": "Discover More",
   "contactUs": "Contact Us",
-
   "title": "About Us",
-  "subtitle": "We are dedicated to delivering innovative solutions that make a difference.",
-  "missionTitle": "Our Mission",
-  "missionDesc": "Organizing local and international conferences and exhibitions, planning and executing parties and special events, managing and coordinating official and social events, providing marketing and promotional services for events, and designing decorations and technical setups for events.",
-  "teamTitle": "Our Team",
-  "teamDesc": "We aim to transform every event into an exceptional experience through innovation, quality, and attention to the finest details to ensure the event's success and brilliance.",
-  "visionTitle": "Our Vision",
-  "visionDesc": "To be the first choice in event organization by delivering creative touches and high-end services that keep up with the latest global trends.",
-
+  "mediaProductionTitle": "Media Production",
+  "mediaProductionDesc": "Visual and audio media production, including cinematic films, traditional animation, commercials, TV programs, and video films and shows.",
+  "eventManagementTitle": "Exhibition and Conference Management",
+  "eventManagementDesc": "Organizing and managing exhibitions and conferences, including operating related centers and facilities.",
+  "crowdManagementTitle": "Crowd Management",
+  "crowdManagementDesc": "Managing events that require crowd control and logistical coordination to ensure safety and smooth operation.",
+  "digitalEventsTitle": "Digital Events Organization",
+  "digitalEventsDesc": "Organizing digital and electronic events to achieve wider and more impactful reach.",
+  "marketingServicesTitle": "Marketing Services",
+  "marketingServicesDesc": "Providing marketing and digital promotional services to ensure the success of events.",
+  "weddingEventsTitle": "Wedding and Special Event Planning",
+  "weddingEventsDesc": "Organizing weddings and special occasions with the highest quality and excellence.",
   "titleServices": "Our Services",
   "subtitleServices": "We specialize in organizing world-class events with creativity and precision.",
   "corporateTitle": "Corporate Events",
@@ -61,6 +66,5 @@
   "faq": "F.A.Q",
   "privacyPolicy": "Privacy Policy",
   "termsConditions": "Terms & Conditions",
-  "location":"3 Street Al-Koroum, off Abdel Moneim Riad - Dokki"
-
+  "location": "3 Street Al-Koroum, off Abdel Moneim Riad - Dokki"
 }
