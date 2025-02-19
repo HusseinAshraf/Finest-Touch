@@ -17,6 +17,22 @@ function Footer() {
   const { t } = useTranslation();
   const isArabic = i18n.language === "ar";
 
+  const phoneNumbers = [
+    "+966 56 766 3000",
+    "+966 11 464 9777",
+    "+966 11 203 3735",
+  ];
+
+  const locations = [
+    {
+      country: t("Saudi Arabia"),
+      address: t("Riyadh, P.O.Box 305666-Riyadh 11361"),
+    },
+    { country: t("UAE"), address: t("Dubai, Business Bay") },
+    { country: t("Egypt"), address: t("Cairo, Dokki") },
+    { country: t("Qatar"), address: t("Doha, West Bay") },
+  ];
+
   return (
     <footer className="w-full bg-gray-900 text-gray-300 py-10">
       <div className="container mx-auto px-6 lg:px-20">
@@ -35,36 +51,35 @@ function Footer() {
           </div>
           <div>
             <p className="text-lg font-semibold text-white">{t("contactUs")}</p>
-            <div
-              className={`mt-3 space-y-2 text-${isArabic ? "right" : "left"}`}
-            >
-              <p>
-                <span className="font-medium">{t("phone")}:</span>{" "}
-                <a href="tel:850-123-5021" className="hover:text-blue-400">
-                  850-123-5021
-                </a>
-              </p>
+            <div className={`mt-3 space-y-2 text-${isArabic ? "right" : "left"}`}>
+              {phoneNumbers.map((phone, index) => (
+                <p key={index}>
+                  <span className="font-medium">{t("phone")}:</span>{" "}
+                  <a href={`tel:${phone}`} className="hover:text-blue-400">
+                    {phone}
+                  </a>
+                </p>
+              ))}
               <p>
                 <span className="font-medium">{t("email")}:</span>{" "}
                 <a
                   href="mailto:info@finesttouch.com.sa"
                   className="hover:text-blue-400"
                 >
-                 info@finesttouch.com.sa
+                  info@finesttouch.com.sa
                 </a>
               </p>
-              <p>
-                <span className="font-medium">{t("address")}:</span>{" "}
-                <a
-                  href="https://maps.app.goo.gl/9mUYVJmqLgcUuJox5"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-blue-400"
-                >
-                  
-                  {t('location')}
-                </a>
-              </p>
+            </div>
+          </div>
+          <div>
+            <p className="text-lg font-semibold text-white">{t("ourBranches")}</p>
+            <div className={`mt-3 space-y-2 text-${isArabic ? "right" : "left"}`}>
+              {locations.map((location, index) => (
+                <p key={index}>
+                  <span className="font-medium">{location.country}:</span>{" "}
+                  {location.address}
+                </p>
+              ))}
             </div>
           </div>
           <div>
