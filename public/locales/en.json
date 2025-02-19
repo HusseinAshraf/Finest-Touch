@@ -6,7 +6,6 @@
   "contact": "Contact",
   "finestTouch": "Finest Touch",
   "subtitle": "We are a company specialized in organizing and managing events at a professional level...",
-
   "homeDescription": "We are a company specialized in organizing and managing events at a professional level, offering comprehensive services that include planning, coordination, execution, and marketing for various types of events, from conferences and exhibitions to private parties and official occasions.",
   "discoverMore": "Discover More",
   "contactUs": "Contact Us",
@@ -66,5 +65,14 @@
   "faq": "F.A.Q",
   "privacyPolicy": "Privacy Policy",
   "termsConditions": "Terms & Conditions",
-  "location": "3 Street Al-Koroum, off Abdel Moneim Riad - Dokki"
+  "location": "3 Street Al-Koroum, off Abdel Moneim Riad - Dokki",
+  "ourLocations": "Our Locations",
+  "Saudi Arabia": "Saudi Arabia",
+  "Riyadh, P.O.Box 305666-Riyadh 11361": "Riyadh, P.O.Box 305666-Riyadh 11361",
+  "UAE": "UAE",
+  "Dubai, Business Bay": "Dubai, Business Bay",
+  "Egypt": "Egypt",
+  "Cairo, Dokki": "Cairo, Dokki",
+  "Qatar": "Qatar",
+  "Doha, West Bay": "Doha, West Bay"
 }
