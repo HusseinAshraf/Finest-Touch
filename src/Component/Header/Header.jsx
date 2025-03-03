@@ -36,7 +36,7 @@ function Header() {
             <ul className="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:space-x-8 md:flex-row md:mt-0 md:border-0">
               <li className="relative">
                 <Link
-                  to="home"
+                  to="hero"
                   smooth={true}
                   duration={500}
                   activeClass="after:scale-x-50"

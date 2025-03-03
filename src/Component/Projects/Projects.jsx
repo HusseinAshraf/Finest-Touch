@@ -4,16 +4,16 @@ import "slick-carousel/slick/slick-theme.css";
 import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
 import UnderlineSkew from "../Ui/UnderlineSkew ";
-// import UnderlineSkew from "../Ui/UnderlineSkew";
+import img1 from "../../assets/img/قيصرية للكتاب.jpg";
 
 function NextArrow(props) {
   const { onClick } = props;
   return (
     <button
-      className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-gray-900 text-white p-2 rounded-full shadow-lg z-10 hover:bg-gray-700 transition"
+      className="absolute top-1/2 right-[-25px] transform -translate-y-1/2 bg-gray-900 text-white p-3 rounded-full shadow-lg z-10 hover:bg-gray-700 hover:bg-opacity-80 transition"
       onClick={onClick}
     >
-      <FaArrowRight size={20} />
+      <FaArrowRight size={15} />
     </button>
   );
 }
@@ -22,10 +22,10 @@ function PrevArrow(props) {
   const { onClick } = props;
   return (
     <button
-      className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-gray-900 text-white p-2 rounded-full shadow-lg z-10 hover:bg-gray-700 transition"
+      className="absolute top-1/2 left-[-25px] transform -translate-y-1/2 bg-gray-900 text-white p-3 rounded-full shadow-lg z-10 hover:bg-gray-700 hover:bg-opacity-80 transition"
       onClick={onClick}
     >
-      <FaArrowLeft size={20} />
+      <FaArrowLeft size={15} />
     </button>
   );
 }
@@ -57,6 +57,12 @@ function Projects() {
       title: t("fashionShowTitle"),
       image: "https://images.unsplash.com/photo-1512314889357-e157c22f938d",
       description: t("fashionShowDesc"),
+    },
+    {
+      id: 5,
+      title: "مشروع قيصرية الكتاب",
+      image:  img1 ,
+      description: "حفل افتتاح مشروع قيصرية الكتاب والفعاليات المصاحبة له.",
     },
   ];
 
@@ -100,7 +106,9 @@ function Projects() {
                   className="w-full h-[300px] object-cover rounded-lg"
                 />
                 <h3 className="text-xl font-semibold mt-4">{project.title}</h3>
-                <p className="text-gray-700 text-sm mt-2">{project.description}</p>
+                <p className="text-gray-700 text-sm mt-2">
+                  {project.description}
+                </p>
               </div>
             ))}
           </Slider>

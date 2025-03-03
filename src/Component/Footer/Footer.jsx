@@ -1,6 +1,5 @@
 import React from "react";
 import logo from "../../assets/img/logo.png";
-import { Link } from "react-scroll";
 import {
   FaFacebookF,
   FaTwitter,
@@ -12,6 +11,7 @@ import {
 } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
 import i18n from "i18next";
+import { Link } from "react-router-dom";
 
 function Footer() {
   const { t } = useTranslation();
@@ -39,7 +39,7 @@ function Footer() {
         <div className="grid gap-10 row-gap-6 sm:grid-cols-2 lg:grid-cols-4">
           <div className="sm:col-span-2 w-full">
             <Link
-              to="home"
+              to="/"
               smooth={true}
               duration={1500}
               offset={-50}
@@ -51,7 +51,9 @@ function Footer() {
           </div>
           <div>
             <p className="text-lg font-semibold text-white">{t("contactUs")}</p>
-            <div className={`mt-3 space-y-2 text-${isArabic ? "right" : "left"}`}>
+            <div
+              className={`mt-3 space-y-2 text-${isArabic ? "right" : "left"}`}
+            >
               {phoneNumbers.map((phone, index) => (
                 <p key={index}>
                   <span className="font-medium">{t("phone")}:</span>{" "}
@@ -72,8 +74,12 @@ function Footer() {
             </div>
           </div>
           <div>
-            <p className="text-lg font-semibold text-white">{t("ourBranches")}</p>
-            <div className={`mt-3 space-y-2 text-${isArabic ? "right" : "left"}`}>
+            <p className="text-lg font-semibold text-white">
+              {t("ourBranches")}
+            </p>
+            <div
+              className={`mt-3 space-y-2 text-${isArabic ? "right" : "left"}`}
+            >
               {locations.map((location, index) => (
                 <p key={index}>
                   <span className="font-medium">{location.country}:</span>{" "}
@@ -110,22 +116,29 @@ function Footer() {
           </div>
         </div>
         <div className="flex flex-col-reverse justify-between pt-5 mt-6 border-t border-gray-700 lg:flex-row">
-          <p className="text-sm">© 2025 Finest Touch. {t("allRightsReserved")}</p>
+          <p className="text-sm">
+            © 2025 Finest Touch. {t("allRightsReserved")}
+          </p>
           <ul className="flex space-x-5 text-sm">
             <li>
-              <a href="/" className="hover:text-blue-400">
+              <Link to="/faq" className="hover:text-blue-400">
                 {t("faq")}
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/" className="hover:text-blue-400">
+              <Link to="/privacy-policy" className="hover:text-blue-400">
                 {t("privacyPolicy")}
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/" className="hover:text-blue-400">
-                {t("termsConditions")}
-              </a>
+              <li>
+                <Link
+                  to="/terms-and-conditions"
+                  className="hover:text-blue-400"
+                >
+                  {t("termsConditions")}
+                </Link>
+              </li>
             </li>
           </ul>
         </div>

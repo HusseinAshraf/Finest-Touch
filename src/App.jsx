@@ -1,25 +1,20 @@
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
-import About from "./Component/About/About";
-import Contact from "./Component/Contact/Contact";
-import Footer from "./Component/Footer/Footer";
-import Header from "./Component/Header/Header";
 import Home from "./Component/Home/Home";
-import Projects from "./Component/Projects/Projects";
-import Services from "./Component/Services/Services";
-// import BackGround from "./Component/Ui/BackGround";
+import TermsAndConditions from "./Component/TermsAndConditions/TermsAndConditions";
+import PrivacyPolicy from "./Component/PrivacyPolicy/PrivacyPolicy";
+import FAQ from "./Component/FAQ/FAQ";
 
 function App() {
   return (
-    <>
-    {/* <BackGround/> */}
-      <Header />
-      <Home />
-      <About />
-      <Services />
-      <Projects />
-      <Contact />
-      <Footer />
-    </>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/terms-and-conditions" element={<TermsAndConditions />} /> 
+        <Route path="/privacy-policy"element={<PrivacyPolicy />} /> 
+        <Route path="/faq" element={<FAQ />} /> 
+      </Routes>
+    </Router>
   );
 }
 
